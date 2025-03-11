@@ -1,0 +1,15 @@
+<div class="user-list">
+  <button (click)="openCreateModal()" class="btn btn-success mb-3" style="height: 50px;">Crear Usuario</button>
+  <div *ngFor="let user of users" class="user-card">
+    <img [src]="user.photo_url" alt="{{ user.name }}" class="user-photo">
+    <div class="user-info">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.job_title }} en {{ user.company }}</p>
+      
+      <button (click)="navigateToDetail(user.id)" class="btn btn-primary" style="margin: 10px;">Ver Detalles</button>
+      <button (click)="openUpdateModal(user)" class="btn btn-warning" style="margin: 10px;">Actualizar</button>
+      <button (click)="deleteUser(user.id)" class="btn btn-danger" style="margin: 10px;">Eliminar</button>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<h2>Actualizar Usuario</h2>
+<form (ngSubmit)="onSubmit()" #updateUserForm="ngForm">
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" [(ngModel)]="data.name" name="name" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="data.email" name="email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Teléfono</label>
+    <input type="text" id="phone" [(ngModel)]="data.phone" name="phone" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="address">Dirección</label>
+    <input type="text" id="address" [(ngModel)]="data.address" name="address" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="job_title">Cargo</label>
+    <input type="text" id="job_title" [(ngModel)]="data.job_title" name="job_title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="company">Empresa</label>
+    <input type="text" id="company" [(ngModel)]="data.company" name="company" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="photo_url">URL de la Foto</label>
+    <input type="text" id="photo_url" [(ngModel)]="data.photo_url" name="photo_url" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Actualizar</button>
+  <button type="button" (click)="onCancel()" class="btn btn-secondary">Cancelar</button>
+</form>

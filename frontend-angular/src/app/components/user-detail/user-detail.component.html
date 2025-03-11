@@ -1,0 +1,12 @@
+<div *ngIf="user" class="user-detail">
+  <img [src]="user.photo_url" alt="{{ user.name }}" class="user-photo-large">
+  <h2>{{ user.name }}</h2>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p *ngIf="user.phone"><strong>Teléfono:</strong> {{ user.phone }}</p>
+  <p *ngIf="user.address"><strong>Dirección:</strong> {{ user.address }}</p>
+  <p *ngIf="user.job_title"><strong>Cargo:</strong> {{ user.job_title }}</p>
+  <p *ngIf="user.company"><strong>Empresa:</strong> {{ user.company }}</p>
+  <button (click)="deleteUser()" class="btn btn-danger" style="margin: 10px;">Eliminar</button>
+
+  <button (click)="goBack()" class="btn btn-primary mt-3">Volver a la lista de usuarios</button>
+</div>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+h2{
+    font-style: arial;
+}
+  
